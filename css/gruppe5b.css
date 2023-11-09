@@ -1,0 +1,17 @@
+body {
+    max-width: 90%;
+    margin: auto;
+}
+
+.center-title-container {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.paragraph-container {
+    display: inline-block;
+    margin: auto;
+    width: 30%;
+    padding: 5% 5% 0 0;
+}

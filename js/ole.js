@@ -1,4 +1,4 @@
-import {circle, rectangle} from "./figures.js"
+import {circle, circleSVG, rectangle, rectangleSVG} from "./figures.js"
 
 // Hode
 function drawMikkey(canvasID) {
@@ -31,5 +31,23 @@ function drawFlag(canvasID) {
     rectangle(20, 160, "solid", "rgba(0, 32, 91, 1)", canvasID, 70, 0)
 }
 
-drawMikkey("mickey")
-drawFlag("flag")
+function drawMovingBall() {
+    const element = document.getElementById("moving");
+
+    element.innerHTML = `${circleSVG(50, undefined, "rgba(186, 12, 47, 1)", 50, 50)}
+    ${circleSVG(25, undefined, "#ffffff", 50, 50)}
+    ${circleSVG(20, undefined, "rgba(0, 32, 91, 1)", 50, 50)}`
+}
+
+function drawSVGRectangle() {
+    const element = document.getElementsByClassName("ole")[0];
+
+    element.innerHTML += `<svg class="ole rect">${rectangleSVG(window.screen.availWidth, 20, "solid", "#363636", 0, 0)}</svg>`
+}
+
+
+drawMovingBall();
+drawSVGRectangle();
+drawMikkey("mickey");
+drawFlag("flag");
+

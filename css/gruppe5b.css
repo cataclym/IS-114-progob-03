@@ -6,6 +6,7 @@
 .ole body {
     max-width: 90%;
     margin: auto;
+    overflow-x:hidden
 }
 
 .ole .center-title-container {
@@ -53,4 +54,22 @@ mark.underline {
     text-decoration-line: underline;
     text-decoration-thickness: 10%;
     text-decoration-color: var(--nor_red);
+}
+
+@keyframes move-circle {
+    from { left: -10%; }
+    to { left: 110%;}
+}
+
+#moving {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: move-circle 5s infinite;
+    animation-direction: alternate;
+}
+
+.ole .rect {
+    width: 100%;
+    height: 100px;   
 }

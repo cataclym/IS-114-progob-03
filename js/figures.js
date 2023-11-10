@@ -9,6 +9,7 @@ function circle(radius, mode, color, canvasId = "canvas", positionX = 0, positio
         ctx.arc(positionX, positionY, radius, 0, Math.PI * 2, false);
 
         switch(mode) {
+            default:
             case "solid":
                 ctx.fill();
                 break;
@@ -23,8 +24,14 @@ function circle(radius, mode, color, canvasId = "canvas", positionX = 0, positio
     }
 }
 
-function circleSVG(radius, mode, color) {
-
+function circleSVG(radius, mode, color, positionX = 0, positionY = 0) {
+    switch (mode) {
+        case "outline":
+            return `<circle cx="${positionX}" cy="${positionY}" r="${radius}" stroke="${color}" fill="rgba(0, 0, 0, 0)" />`
+        default:
+        case "solid":
+            return `<circle cx="${positionX}" cy="${positionY}" r="${radius}" fill="${color}" />`
+    }
 }
 
 function rectangle(width, height, mode, color, canvasId = "canvas", positionX = 0, positionY = 0) {
@@ -50,8 +57,14 @@ function rectangle(width, height, mode, color, canvasId = "canvas", positionX = 
     }
 }
 
-function rectangleSVG(width, heigth, mode, color) {
-
+function rectangleSVG(width, heigth, mode, color, positionX = 0, positionY = 0) {
+    switch (mode) {
+        case "outline":
+            return `<rect width="${width}" height="${heigth}" x="${positionX}" y="${positionY}" stroke="${color}" fill="rgba(0, 0, 0, 0)" />`
+        default:
+        case "solid":
+            return `<rect width="${width}" height="${heigth}" x="${positionX}" y="${positionY}" fill="${color}" />`
+    }
 }
 
 export { circle, circleSVG, rectangle, rectangleSVG }

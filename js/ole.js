@@ -34,14 +34,13 @@ function drawFlag(canvasID) {
 function drawMovingBall() {
     const element = document.getElementById("moving");
 
-    element.innerHTML = `${circleSVG(50, undefined, "rgba(186, 12, 47, 1)", 50, 50)}
+    element.innerHTML = `<a xlink:href="../">${circleSVG(50, undefined, "rgba(186, 12, 47, 1)", 50, 50)}
     ${circleSVG(25, undefined, "#ffffff", 50, 50)}
-    ${circleSVG(20, undefined, "rgba(0, 32, 91, 1)", 50, 50)}`
+    ${circleSVG(20, undefined, "rgba(0, 32, 91, 1)", 50, 50)}</a>`
 }
 
 function drawSVGRectangle() {
     const element = document.getElementsByClassName("ole")[0];
-
     element.innerHTML += `<svg class="ole rect">${rectangleSVG(window.screen.availWidth, 20, "solid", "#363636", 0, 0)}</svg>`
 }
 

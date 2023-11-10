@@ -22,10 +22,14 @@
     margin-bottom: 1rem;
 }
 
-.ole body {
-    max-width: 90%;
-    margin: auto;
-    overflow-x:hidden
+body.ole {
+    max-width: 100%;
+    overflow-x:hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.paragraph-container > p {
+    font-size: smaller !important;
 }
 
 .ole .center-title-container {
@@ -92,4 +96,20 @@ mark.underline {
 .ole .rect {
     width: 100%;
     height: 100px;   
+}
+
+.ole .link {
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: var(--nor_red) solid 5px;
+}
+
+.link a, .link a:active, link a:visited {
+    color: var(--nor_blue);
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;  
 }

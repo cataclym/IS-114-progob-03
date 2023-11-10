@@ -3,6 +3,25 @@
     --nor_blue: rgba(0, 32, 91, 1);
 }
 
+.main-links {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    justify-content: left;
+}
+
+.main-index-title-container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-element {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 1rem;
+}
+
 .ole body {
     max-width: 90%;
     margin: auto;
@@ -13,6 +32,7 @@
     display: block;
     margin: auto;
     text-align: center;
+    width: fit-content;
 }
 
 .ole .main-paragrap-container {

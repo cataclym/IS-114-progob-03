@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <head>
-
+    <link rel="stylesheet" type="text/css" href="./css/gruppe5b.css">
 </head>
 <body>
-    <h1>Progob-03 Gruppe 5b</h1>
-    <h1>Heisann</h1>
-
-    <div class="main-links">
-    <a href="https://github.com/cataclym/IS-114-progob-03">GitHub Repository</a>
-    <a href="ole.html">Ole</a>
+    <div class="main-index-title-container">
+        <h1>Progob-03 Gruppe 5b</h1>
+        <h2>Heisann</h1>
     </div>
-    
+    <svg class="title-element"></svg>
+    <div class="main-links">
+        <div>
+            <a href="https://github.com/cataclym/IS-114-progob-03">GitHub Repository</a>
+        </div>
+        <div>
+            <a href="ole.html">Ole</a>
+        </div>
+    </div>
+    <script type="module">
+        import {rectangleSVG} from "./js/figures.js";
+        document.addEventListener('DOMContentLoaded', function(event) {
+            document.getElementsByClassName("title-element")[0].innerHTML = rectangleSVG(window.screen.availWidth, 5, "solid", "#000000")         
+        });
+    </script>
 </body>

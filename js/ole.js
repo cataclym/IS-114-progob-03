@@ -45,9 +45,8 @@ function drawSVGRectangle() {
     element.innerHTML += `<svg class="ole rect">${rectangleSVG(window.screen.availWidth, 20, "solid", "#363636", 0, 0)}</svg>`
 }
 
-
+// Funksjoner i rekkefølge
 drawMovingBall();
 drawSVGRectangle();
 drawMikkey("mickey");
 drawFlag("flag");
-

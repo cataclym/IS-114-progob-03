@@ -51,3 +51,12 @@ export function drawMovingBall() {
     ${circleSVG(25, undefined, "#ffffff", 50, 50)}
     ${circleSVG(20, undefined, "rgba(0, 32, 91, 1)", 50, 50)}</a>`
 }
+
+if (document.URL.endsWith("ole.html")) {
+    drawMovingBall();
+    drawFlag("flag");
+    drawMarathon(1.5);
+}
+else {
+    drawMarathon(2.4)
+}

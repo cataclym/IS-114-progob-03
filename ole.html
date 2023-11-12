@@ -3,11 +3,31 @@
     <title>Ole</title>
     <link rel="stylesheet" type="text/css" href="./css/gruppe5b.css">
     <script type="module" src="./js/ole.js"></script>
+    <style>
+        @keyframes link-animation {
+            0% { border: var(--nor_red) 5px;
+                border-style: dashed solid;
+            }
+            25% { border: var(--nor_blue) 5px;
+                border-style: solid dashed;
+            }
+            50% { border: var(--nor_red) 5px;
+                border-style: dashed solid;
+            }
+            75% { border: var(--nor_blue) 5px;
+                border-style: solid dashed;
+            }
+            100% { border: var(--nor_red) 5px;
+                border-style: dashed solid;
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+    </style>
 </head>
 <body class="ole">
     <div class="center-title-container">
         <h1>Ole M. K. Hagberg</h1>
-        <h3></h3>
+        <h3>Lager kreative figurer...</h3>
     </div>
     <div class="ole canvas-container">
         <svg class="svg-container" id="ole" width="220">
@@ -17,6 +37,9 @@
     </div>
     <div class="ole canvas-container">
         <h2>Velkommen til min side her på denne <mark class="underline">herlige</mark> dagen!</h2>
+    </div>
+    <div class="ole canvas-container">
+        <a href="https://github.com/cataclym/pyret-figur/tree/main"><h4>GitHub pyret kode</h4></a>
     </div>
     <div class="ole main-paragrap-container">
         <div class="ole paragraph-container">
@@ -36,8 +59,10 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Aliquam faucibus purus in massa tempor nec. Magna sit amet purus gravida quis blandit. Sem viverra aliquet eget sit amet tellus cras.</p>
         </div>
     </div>
-        <div class="ole link">
-            <a href="./index.html">Tilbake</a>
+        <div class="ole link-div">
+            <a class="ole link" href="./index.html">
+                Tilbake
+            </a>
         </div>
     <svg class="ole" id="moving"></svg>
 </body>

@@ -18,9 +18,11 @@
 
 .title-bar {
     width: 100%;
-    height: 1rem;
+    height: 0.7rem;
     margin: 0.5rem 0 1rem 0;
     background-color: black;
+    border: black 2px solid;
+    border-radius: 10px;
 }
 
 body.ole {
@@ -96,23 +98,24 @@ mark.underline {
     bottom: -80%;
 }
 
-.ole .rect {
-    width: 100%;
-    height: 100px;
-}
-
-.ole .link {
+.ole.link-div {
     background-color: white;
     text-align: center;
     margin: auto;
     width: fit-content;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border: var(--nor_red) solid 5px;
+    animation: link-animation 1.5s infinite linear;
 }
 
-.link a, .link a:active, link a:visited {
+.ole.link, .ole.link:active, .ole.link:visited {
     color: var(--nor_blue);
     font-size: large;
     font-weight: bold;
     text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: -0.5rem -1rem -0.5rem -1rem;
 }

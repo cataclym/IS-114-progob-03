@@ -5,21 +5,37 @@
 <body>
     <div class="main-index-title-container">
         <h1>Progob-03 Gruppe 5b</h1>
-        <h2>Heisann</h1>
+        <h2>Heisann</h2>
     </div>
-    <svg class="title-element"></svg>
+    <div>
+        <a href="https://github.com/cataclym/IS-114-progob-03">GitHub Repository</a>
+    </div>
+    <div class="title-bar"></div>
     <div class="main-links">
         <div>
-            <a href="https://github.com/cataclym/IS-114-progob-03">GitHub Repository</a>
+            <a href="anna.html">Anna</a>
+            <canvas class="felles-canvas-svg" id="anna"></canvas>
+        </div>
+        <div>
+            <a href="espen.html">Espen</a>
+            <canvas class="felles-canvas-svg" id="espen"></canvas>
+        </div>
+        <div>
+            <a href="meriton.html">Meriton</a>
+            <canvas class="felles-canvas-svg" id="meriton"></canvas>
+        </div>
+        <div>
+            <a href="mohammad.html">Mohammad</a>
+            <canvas class="felles-canvas-svg" id="mohammad"></canvas>
         </div>
         <div>
             <a href="ole.html">Ole</a>
+            <svg class="felles-canvas-svg" id="ole"></svg>
         </div>
     </div>
     <script type="module">
-        import {rectangleSVG} from "./js/figures.js";
-        document.addEventListener('DOMContentLoaded', function(event) {
-            document.getElementsByClassName("title-element")[0].innerHTML = rectangleSVG(window.screen.availWidth, 5, "solid", "#000000")         
-        });
+        import {drawMarathon} from "./js/ole.js"
+
+        drawMarathon(2.4)
     </script>
 </body>

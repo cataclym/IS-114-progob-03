@@ -5,9 +5,9 @@
 
 .main-links {
     display: flex;
-    flex-direction: column;
-    flex-flow: column wrap;
-    justify-content: left;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-grow: 6;
 }
 
 .main-index-title-container {
@@ -16,16 +16,21 @@
     margin-right: auto;
 }
 
-.title-element {
+.title-bar {
     width: 100%;
-    height: 20px;
-    margin-bottom: 1rem;
+    height: 1rem;
+    margin: 0.5rem 0 1rem 0;
+    background-color: black;
 }
 
 body.ole {
     max-width: 100%;
     overflow-x:hidden;
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.ole.svg-container {
+    justify-content: center;
 }
 
 .paragraph-container > p {
@@ -59,15 +64,12 @@ body.ole {
 .ole .canvas-container {
     margin: auto;
     display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    order: 4;
-    flex-grow: 4;
+    align-items: center;
     justify-content: center;
-    column-gap: 2rem;
+    column-gap: 1rem;
 }
 
-#ole {
+.felles-canvas-svg {
     width: 15rem;
     height: 15rem;
     margin: auto;
@@ -85,17 +87,18 @@ mark.underline {
     to { left: 110%;}
 }
 
-#moving {
+.ole#moving {
     width: 100px;
     height: 100px;
     position: relative;
     animation: move-circle 5s infinite;
     animation-direction: alternate;
+    bottom: -80%;
 }
 
 .ole .rect {
     width: 100%;
-    height: 100px;   
+    height: 100px;
 }
 
 .ole .link {
@@ -111,5 +114,5 @@ mark.underline {
     color: var(--nor_blue);
     font-size: large;
     font-weight: bold;
-    text-decoration: none;  
+    text-decoration: none;
 }

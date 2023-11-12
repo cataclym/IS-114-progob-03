@@ -24,10 +24,10 @@ function circle(radius, mode, color, canvasId = "canvas", positionX = 0, positio
     }
 }
 
-function circleSVG(radius, mode, color, positionX = 0, positionY = 0) {
+function circleSVG(radius, mode, color, positionX = 0, positionY = 0, outlineWidth = 5) {
     switch (mode) {
         case "outline":
-            return `<circle cx="${positionX}" cy="${positionY}" r="${radius}" stroke="${color}" fill="rgba(0, 0, 0, 0)" />`
+            return `<circle cx="${positionX}" cy="${positionY}" r="${radius}" stroke="${color}" fill="rgba(0, 0, 0, 0)" stroke-width="${outlineWidth}" />`
         default:
         case "solid":
             return `<circle cx="${positionX}" cy="${positionY}" r="${radius}" fill="${color}" />`

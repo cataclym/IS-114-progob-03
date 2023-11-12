@@ -2,16 +2,23 @@
 <head>
     <title>Ole</title>
     <link rel="stylesheet" type="text/css" href="./css/gruppe5b.css">
-    <script type="module" async src="./js/ole.js"></script>
-    <script type="module" async src="./js/figures.js"></script>
+    <script type="module">
+        import {drawMovingBall, drawMarathon, drawFlag} from "./js/ole.js";
+
+        drawMovingBall();
+        drawFlag("flag");
+        drawMarathon(1.5);
+    </script>
 </head>
 <body class="ole">
     <div class="center-title-container">
-        <h1>Ole</h1>
-        <h3>Junior utvikler</h3>
+        <h1>Ole M. K. Hagberg</h1>
+        <h3></h3>
     </div>
     <div class="ole canvas-container">
-        <canvas id="mickey"></canvas>
+        <svg class="svg-container" id="ole" width="220">
+            <g transform="translate(35, 0)"></g>
+        </svg>
         <canvas id="flag"></canvas>
     </div>
     <div class="ole canvas-container">
@@ -21,7 +28,7 @@
         <div class="ole paragraph-container">
             <h4>Litt om meg</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Aliquam faucibus purus in massa tempor nec. Magna sit amet purus gravida quis blandit. Sem viverra aliquet eget sit amet tellus cras.</p>
-        </div>  
+        </div>
         <div class="ole paragraph-container">
             <h4>Litt mer om meg</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Aliquam faucibus purus in massa tempor nec. Magna sit amet purus gravida quis blandit. Sem viverra aliquet eget sit amet tellus cras.</p>
@@ -38,5 +45,5 @@
         <div class="ole link">
             <a href="./index.html">Tilbake</a>
         </div>
-    <svg id="moving"></svg>
+    <svg class="ole" id="moving"></svg>
 </body>

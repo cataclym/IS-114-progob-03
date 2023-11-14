@@ -1,15 +1,16 @@
 :root {
-    --background-clr: #323031;
-    --card-clr: #A799B7;
+    --background-clr: white;
+    --card-clr: #F0B366;
     --font-clr: black;
     --img-bg-clr: var(--background-clr);
-    --right-clr: #13070c;
+    --right-clr: #F0A071;
+    --box-shadow: rgba(0,0,0,0.8) 3px 3px 1px;
+    --header-clr: #F08267;
 }
 
 .felles-canvas-svg {
     height: 15rem;
     margin: auto;
-    background-color: var(--img-bg-clr);
     border: black solid 3px;
     border-radius: 10px;
     padding: 20px;
@@ -30,8 +31,16 @@
 }
 
 .felles-link, .felles-link:visited, .felles-link:link {
-    color: var(--card-clr);
+    color: var(--font-clr);
     text-decoration: none;
+    border: 2px var(--font-clr) solid;
+    background-color: var(--card-clr);
+    padding: 0.6rem;
+    border-radius: 10px;
+}
+
+.felles-link:hover {
+    background-color: var(--header-clr);
 }
 
 * {
@@ -51,9 +60,9 @@ body {
     padding: 30px;
     font-size: 40px;
     text-align: center;
-    background: var(--card-clr);
+    background: var(--header-clr);
     border-radius: 10px;
-    box-shadow: rgba(0,0,0,0.8) 3px 3px 1px;
+    box-shadow: var(--box-shadow);
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -84,7 +93,7 @@ body {
     margin-top: 20px;
     color: var(--font-clr);
     border-radius: 10px;
-    box-shadow: rgba(0,0,0,0.8) 3px 3px 1px;
+    box-shadow: var(--box-shadow);
 }
 
 /* Clear floats after the columns */
@@ -101,7 +110,7 @@ body {
     background: var(--card-clr);
     margin-top: 20px;
     border-radius: 10px;
-    box-shadow: rgba(0,0,0,0.8) 3px 3px 1px;
+    box-shadow: var(--box-shadow);
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -114,5 +123,5 @@ body {
 
 .right-column {
     background-color: var(--right-clr);
-    color: var(--card-clr);
+    color: var(--font-clr);
 }

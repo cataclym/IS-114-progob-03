@@ -13,6 +13,16 @@ export function drawMikkey(canvasID) {
     circle(52, "solid", "#000000", canvasID, 100, 105)
 }
 
+export function drawMikkeySVG(svgID) {
+    const svgElement = document.getElementById(svgID);
+
+    const sirkel1 = circleSVG(35, "solid", "#000000", 35, 50),
+        sirkel2 = circleSVG(35, "solid", "#000000", 165, 50),
+        sirkel3 = circleSVG(52, "solid", "#000000", 100, 105)
+
+    svgElement.innerHTML += `${sirkel1} ${sirkel2} ${sirkel3}`;
+}
+
 // SVG Marathon symbol
 export function drawMarathon(scale = 1) {
     const svgElement = document.getElementById("ole");
@@ -58,5 +68,6 @@ if (document.URL.endsWith("ole.html")) {
     drawMarathon(1.5);
 }
 else {
-    drawMarathon(2.4)
+    drawMarathon(1.9)
 }
+

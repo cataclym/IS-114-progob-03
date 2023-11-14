@@ -1,6 +1,15 @@
 :root {
     --nor_red: rgba(186, 12, 47, 10);
     --nor_blue: rgba(0, 32, 91, 1);
+
+    --accent-pink: #ef476f;
+    --accent-yellow: #ffc847;
+    --accent-blue: #0e7395;
+
+    --background-clr: #ebfef9;
+    --card-clr: #ffd61f;
+    --font-clr: black;
+    --img-bg-clr: var(--background-clr);
 }
 
 .main-links {
@@ -19,10 +28,9 @@
 .title-bar {
     width: 100%;
     height: 0.7rem;
-    margin: 0.5rem 0 1rem 0;
+    margin: 0.5rem auto 1rem auto;
     background-color: black;
     border: black 2px solid;
-    border-radius: 10px;
 }
 
 body.ole {
@@ -72,9 +80,12 @@ body.ole {
 }
 
 .felles-canvas-svg {
-    width: 15rem;
     height: 15rem;
     margin: auto;
+    background-color: var(--img-bg-clr);
+    border: #573d1c solid 5px;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 mark.underline {
@@ -118,4 +129,91 @@ mark.underline {
     z-index: 1;
     padding: 0.5rem 1rem 0.5rem 1rem;
     margin: -0.5rem -1rem -0.5rem -1rem;
+}
+
+.felles-link, .felles-link:visited, .felles-link:link {
+    color: var(--card-clr);
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Arial;
+    padding: 20px;
+    background-color: var(--background-clr);
+    margin: 0;
+    overflow-x:hidden;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: var(--card-clr);
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: var(--card-clr);
+    padding: 20px;
+    margin-top: 20px;
+    color: var(--font-clr);
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.8) 3px 3px 1px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: var(--card-clr);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.github {
+    background-color: #573d1c;
+    color: var(--card-clr);
 }

@@ -6,8 +6,8 @@
     --accent-yellow: #ffc847;
     --accent-blue: #0e7395;
 
-    --background-clr: #ebfef9;
-    --card-clr: #ffd61f;
+    --background-clr: #323031;
+    --card-clr: #A799B7;
     --font-clr: black;
     --img-bg-clr: var(--background-clr);
 }
@@ -83,7 +83,7 @@ body.ole {
     height: 15rem;
     margin: auto;
     background-color: var(--img-bg-clr);
-    border: #573d1c solid 5px;
+    border: black solid 3px;
     border-radius: 10px;
     padding: 20px;
 }
@@ -214,6 +214,6 @@ body {
 }
 
 .github {
-    background-color: #573d1c;
+    background-color: #13070c;
     color: var(--card-clr);
 }

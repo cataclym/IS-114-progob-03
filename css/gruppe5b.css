@@ -2,14 +2,11 @@
     --nor_red: rgba(186, 12, 47, 10);
     --nor_blue: rgba(0, 32, 91, 1);
 
-    --accent-pink: #ef476f;
-    --accent-yellow: #ffc847;
-    --accent-blue: #0e7395;
-
     --background-clr: #323031;
     --card-clr: #A799B7;
     --font-clr: black;
     --img-bg-clr: var(--background-clr);
+    --right-clr: #13070c;
 }
 
 .main-links {
@@ -72,7 +69,6 @@ body.ole {
 }
 
 .ole .canvas-container {
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,7 +209,7 @@ body {
     }
 }
 
-.github {
-    background-color: #13070c;
+.right-column {
+    background-color: var(--right-clr);
     color: var(--card-clr);
 }

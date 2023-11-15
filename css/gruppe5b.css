@@ -5,29 +5,26 @@
     --img-bg-clr: var(--background-clr);
     --right-clr: #F0A071;
     --box-shadow: rgba(0,0,0,0.8) 3px 3px 1px;
+    --box-shadow-button: rgba(0,0,0,0.8) 2px 2px 1px;
+    --box-shadow-after: rgba(0,0,0,0.8) 3px 3px 1px;
     --header-clr: #F08267;
 }
 
 .felles-canvas-svg {
-    height: 15rem;
-    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
     border: black solid 3px;
     border-radius: 10px;
-    padding: 20px;
 }
 
 @keyframes move-circle {
-    from { left: -10%; }
-    to { left: 110%;}
+    from { top: 5%; }
+    to { top: 250%;}
 }
 
-.ole#moving {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    animation: move-circle 5s infinite;
-    animation-direction: alternate;
-    bottom: -80%;
+@keyframes move-circle-small {
+    from { left: 0; }
+    to { left: 85%; }
 }
 
 .felles-link, .felles-link:visited, .felles-link:link {
@@ -37,10 +34,13 @@
     background-color: var(--card-clr);
     padding: 0.6rem;
     border-radius: 10px;
+    box-shadow: var(--box-shadow-button);
 }
 
 .felles-link:hover {
     background-color: var(--header-clr);
+    box-shadow: var(--box-shadow-after);
+    transform: translate3d(0, 0, 0);
 }
 
 * {
@@ -65,28 +65,20 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
+/* Venstre kolonne */
 .leftcolumn {
     float: left;
     width: 75%;
 }
 
-/* Right column */
+/* Høyre kolonne */
 .rightcolumn {
     float: left;
     width: 25%;
     padding-left: 20px;
 }
 
-/* Fake image */
-.fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-}
-
-/* Add a card effect for articles */
+/* Kort for "artikler" */
 .card {
     background-color: var(--card-clr);
     padding: 20px;
@@ -96,14 +88,13 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Footer */
+/* Bunnkort */
 .footer {
     padding: 20px;
     text-align: center;
@@ -113,7 +104,6 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
     .leftcolumn, .rightcolumn {
         width: 100%;

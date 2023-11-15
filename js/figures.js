@@ -1,4 +1,4 @@
-function circle(radius, mode, color, canvasId = "canvas", positionX = 0, positionY = 0) {
+function circle(radius, mode, color, canvasId = "canvas", positionX = 0, positionY = 0, outlineWidth = 5) {
     const canvas = document.getElementById(canvasId);
 
     if (canvas.getContext) {
@@ -6,6 +6,7 @@ function circle(radius, mode, color, canvasId = "canvas", positionX = 0, positio
         ctx.beginPath()
         ctx.fillStyle = color;
         ctx.strokeStyle = color;
+        ctx.lineWidth = outlineWidth;
         ctx.arc(positionX, positionY, radius, 0, Math.PI * 2, false);
 
         switch(mode) {

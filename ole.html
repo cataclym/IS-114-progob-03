@@ -3,11 +3,27 @@
     <title>Ole</title>
     <link rel="stylesheet" type="text/css" href="./css/gruppe5b.css">
     <script type="module" src="./js/ole.js"></script>
+    <style>
+        /* Animasjonsstyling for sirklen */
+        .ole#moving {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: move-circle 5s infinite;
+            animation-direction: alternate;
+        }
+
+        @media screen and (max-width: 800px) {
+            .ole#moving {
+                animation: move-circle-small 2s infinite alternate ease-in-out;
+            }
+        }
+    </style>
 </head>
 <body class="ole">
     <div class="header">
         <h2>Ole M. K. Hagberg</h2>
-        <h4>Lager kreative figurer...</h4>
+        <h4>Student</h4>
         <svg id="ole" width="220">
             <g transform="translate(35, 0)"></g>
         </svg>
@@ -16,20 +32,24 @@
     <div class="row">
         <div class="leftcolumn">
             <div class="card">
-                <h4>Litt om meg</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Aliquam faucibus purus in massa tempor nec. Magna sit amet purus gravida quis blandit. Sem viverra aliquet eget sit amet tellus cras.</p>
+                <h4>Oppgaven</h4>
+                <p>Hei, denne oppgaven har vært gøy og lærerik. Jeg har hatt muligheten til å bruke mine tidligere kunnskaper med JS, HTML og CSS, men også lært mye nytt.</p>
             </div>
             <div class="card">
                 <h4>Litt mer om meg</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Aliquam faucibus purus in massa tempor nec. Magna sit amet purus gravida quis blandit. Sem viverra aliquet eget sit amet tellus cras.</p>
             </div>
             <div class="card">
-                <h4>Enda litt mer om meg</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Aliquam faucibus purus in massa tempor nec. Magna sit amet purus gravida quis blandit. Sem viverra aliquet eget sit amet tellus cras.</p>
+                <h4>Pyret oppgave grafikk <a class="felles-link" href="https://github.com/cataclym/uia-ind02">Link</a></h4>
+                <p>Hentet fra min GitHub. Repository for progob-02</p>
+                <img class="felles-canvas-svg" src="https://camo.githubusercontent.com/4def24527384c53bd3108eab02e0fea893af79ba6eeef8f3162292a5dd15118a/68747470733a2f2f6e657874636c6f75642e6c696265726e6574732e6f72672f732f656d727877657364464771475279592f646f776e6c6f61642f53637265656e73686f745f32303233313130345f3231313730332e706e67">
             </div>
             <div class="card">
-                <h4>Til slutt litt om meg...</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Aliquam faucibus purus in massa tempor nec. Magna sit amet purus gravida quis blandit. Sem viverra aliquet eget sit amet tellus cras.</p>
+                <h4>Figur i SVG og canvas format</h4>
+                <h3>SVG format</h3>
+                <svg class="felles-canvas-svg" id="svgFigur"><g></g></svg>
+                <h3>Canvas format</h3>
+                <canvas class="felles-canvas-svg" id="canvasFigur"></canvas>
             </div>
         </div>
         <div class="rightcolumn">
@@ -40,10 +60,10 @@
             <div class="card right-column">
                 <a class="felles-link" href="/IS-114-progob-03/">Tilbake</a>
             </div>
+            <svg class="ole" id="moving"></svg>
         </div>
     </div>
     <div class="footer">
         <h2>IS-114-progob-03</h2>
-        <svg class="ole" id="moving"></svg>
     </div>
 </body>

@@ -24,8 +24,8 @@ export function drawMikkeySVG(svgID) {
 }
 
 // SVG Marathon symbol
-export function drawMarathon(scale = 1) {
-    const svgElement = document.getElementById("ole");
+export function drawMarathonSVG(scale = 1, id = "ole") {
+    const svgElement = document.getElementById(id);
 
     const mainCircle = circleSVG(50 * scale, "solid", "#000000", 50 * scale, 50 * scale);
     const outlineCircle = circleSVG(30 * scale, "outline", "white", 50  * scale, 40  * scale, 5  * scale);
@@ -34,6 +34,12 @@ export function drawMarathon(scale = 1) {
     svgElement.children.length && svgElement.children[0].tagName === "g"
         ? svgElement.children[0].innerHTML += `${mainCircle} ${outlineCircle} ${rectangle}`
         : svgElement.innerHTML += `${mainCircle} ${outlineCircle} ${rectangle}`;
+}
+
+export function drawMarathonCanvas(scale = 1, id = "ole") {
+    circle(50 * scale, "solid", "#000000", id, 50 * scale, 50 * scale);
+    circle(30 * scale, "outline", "white", id,50  * scale, 40  * scale, 5  * scale);
+    rectangle(10 * scale, 30 * scale, "solid", "white", id, 45 * scale, 70  * scale);
 }
 
 // Flagg
@@ -65,9 +71,13 @@ export function drawMovingBall() {
 if (document.URL.endsWith("ole.html")) {
     drawMovingBall();
     drawFlag("flag");
-    drawMarathon(1.5);
+
+    drawMarathonSVG(1.5);
+
+    drawMarathonSVG(1.5, "svgFigur")
+    drawMarathonCanvas(1.5, "canvasFigur")
 }
 else {
-    drawMarathon(1.9)
+    drawMarathonSVG(1.9)
 }
 

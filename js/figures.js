@@ -119,10 +119,35 @@ function star(size, color, canvasID, positionX = 0, positionY = 0) {
         ctx.fillStyle = color;
         ctx.fill();
     }
+    else {
+        throw new Error("Canvas doesn't match given ID")
+    }
 }
 
 function starSVG(size = 1, color, positionX = 0, positionY = 0) {
-    return `<g transform="translate(${positionX}, ${positionY})"><polygon points="${100 * size}, ${10 * size} ${40 * size},${198* size} ${190 * size},${78 * size} ${10 * size},${78 * size} ${160 * size},${198 * size}" fill="${color}" /></g>`
+    return `<polygon transform="translate(${positionX}, ${positionY})" points="${100 * size}, ${10 * size} ${40 * size},${198* size} ${190 * size},${78 * size} ${10 * size},${78 * size} ${160 * size},${198 * size}" fill="${color}" />`
+}
+
+function triangle(size, color, id, positionX = 0, positionY = 0) {
+    const canvas = document.getElementById(id);
+
+    if (canvas.getContext) {
+        const ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo((50 + positionX) * size, positionY * size);
+        ctx.lineTo(positionX * size, (50 + positionY) * size);
+        ctx.lineTo((100 + positionX) * size, (50 + positionY) * size);
+        ctx.closePath();
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+    else {
+        throw new Error("Canvas doesn't match given ID")
+    }
+}
+
+function triangleSVG(size, color, positionX = 0, positionY = 0) {
+    return `<polygon transform="translate(${positionX}, ${positionY})" fill="${color}" points="0,0 ${-50 * size},${50 * size} ${50 * size},${50 * size}" />`;
 }
 
 export {
@@ -134,6 +159,8 @@ export {
     rectangleSVG,
     rectangleOutline,
     rectangleOutlineSVG,
+    triangle,
+    triangleSVG,
     star,
     starSVG
 }

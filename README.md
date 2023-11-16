@@ -18,6 +18,9 @@ rectangle(width, height, color, canvasId, positionX, positionY)
 rectangleSVG(width, heigth, color, positionX = 0, positionY = 0)
 rectangleOutline(width, height, color, outlineWidth, canvasId, positionX, positionY)
 rectangleOutlineSVG(width, height, color, outlineWidth, positionX, positionY)
+
+star(size, color, canvasID, positionX, positionY)
+starSVG(size, color, positionX, positionY)
 ```
 
 ## Eks. funksjon som tegner disney symbol.

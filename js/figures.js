@@ -82,14 +82,14 @@ function rectangleOutlineSVG(width, height, color, outlineWidth, positionX = 0, 
     return `<rect width="${width}" height="${height}" x="${positionX}" y="${positionY}" stroke="${color}" stroke-width="${outlineWidth}" fill="rgba(0, 0, 0, 0)" />`
 }
 
-function star(size, color, canvasID) {
+function star(size, color, canvasID, positionX = 0, positionY = 0) {
     const canvas = document.getElementById(canvasID);
 
-    const cx = 75 * size,
-    cy = 100 * size,
-    spikes = 5 * size,
+    const cx = positionX,
+    cy = positionY,
+    spikes = 5,
     outerRadius = 30 * size,
-    innerRadius = 15 * size;
+    innerRadius = 11 * size;
 
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
@@ -121,8 +121,8 @@ function star(size, color, canvasID) {
     }
 }
 
-function starSVG(size = 1, color) {
-    return `<polygon points="${100 * size}, ${10 * size} ${40 * size},${198* size} ${190 * size},${78 * size} ${10 * size},${78 * size} ${160 * size},${198 * size}" fill="${color}" />`
+function starSVG(size = 1, color, positionX = 0, positionY = 0) {
+    return `<g transform="translate(${positionX}, ${positionY})"><polygon points="${100 * size}, ${10 * size} ${40 * size},${198* size} ${190 * size},${78 * size} ${10 * size},${78 * size} ${160 * size},${198 * size}" fill="${color}" /></g>`
 }
 
 export {

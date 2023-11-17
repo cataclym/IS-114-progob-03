@@ -7,8 +7,7 @@ import {
     rectangleSVG,
     triangleSVG,
     star,
-    starSVG,
-    triangle
+    starSVG
 } from "./figures.js"
 
 // Hode
@@ -24,12 +23,12 @@ export function drawMikkey(canvasID) {
     circle(52, "#000000", canvasID, 100, 105)
 }
 
-export function drawMikkeySVG(svgID) {
+export function drawMikkeySVG(scale = 1, svgID) {
     const svgElement = document.getElementById(svgID);
 
-    const sirkel1 = circleSVG(35, "#000000", 35, 50),
-        sirkel2 = circleSVG(35,  "#000000", 165, 50),
-        sirkel3 = circleSVG(52,  "#000000", 100, 105)
+    const sirkel1 = circleSVG(35 * scale, "#000000", 35 * scale, 50  * scale),
+        sirkel2 = circleSVG(35 * scale,  "#000000", 165 * scale, 50  * scale),
+        sirkel3 = circleSVG(52 * scale,  "#000000", 100 * scale, 105  * scale)
 
     svgElement.innerHTML += `${sirkel1} ${sirkel2} ${sirkel3}`;
 }
@@ -95,12 +94,12 @@ export function drawFlag(canvasID) {
     rectangle(20, 160, "rgba(0, 32, 91, 1)", canvasID, 70, 0)
 }
 
-export function drawMovingBall() {
-    const element = document.getElementById("moving");
+export function drawMovingBall(scale = 1, id) {
+    const element = document.getElementById(id);
 
-    element.innerHTML = `<a xlink:href="https://cataclym.github.io/IS-114-progob-03/">${circleSVG(50, "rgba(186, 12, 47, 1)", 50, 50)}
-        ${circleSVG(25, "#ffffff", 50, 50)}
-        ${circleSVG(20, "rgba(0, 32, 91, 1)", 50, 50)}</a>`
+    element.innerHTML = `${circleSVG(50 * scale, "rgba(186, 12, 47, 1)", 50 * scale, 50 * scale)}
+        ${circleSVG(25 * scale, "#ffffff", 50 * scale, 50 * scale)}
+        ${circleSVG(20 * scale, "rgba(0, 32, 91, 1)", 50 * scale, 50 * scale)}`
 }
 
 if (document.URL.endsWith("ole.html")) {
@@ -109,6 +108,8 @@ if (document.URL.endsWith("ole.html")) {
     drawMarathonSVG(1.5, "ole");
     drawMarathonSVG(1.5, "svgFigur")
     drawMarathonCanvas(1.5, "canvasFigur")
+    drawMovingBall(1.5,"ball")
+    drawMikkeySVG(0.9, "mickey")
 }
 else {
     drawMarathonSVG(1.9, "ole")

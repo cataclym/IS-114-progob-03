@@ -15,4 +15,4 @@ export function drawStar(canvasID) {
 
 }
 
-drawStar()
+drawStar("anna")

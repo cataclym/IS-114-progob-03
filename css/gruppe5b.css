@@ -1,6 +1,6 @@
 :root {
     --background-clr: white;
-    --card-clr: #EEEEEE;
+    --card-clr: #d9d7dd;
     --font-clr: black;
     --img-bg-clr: var(--background-clr);
     --right-clr: #393E46;
@@ -47,7 +47,7 @@ body {
     overflow-x:hidden;
 }
 
-/* Header/Blog Title */
+/* Tittel */
 .header {
     color: var(--card-clr);
     padding: 30px;
@@ -82,7 +82,7 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-.card:hover {
+.card:hover, .header-two:hover {
     border: 2px solid var(--header-clr);
 }
 
@@ -103,14 +103,36 @@ body {
     box-shadow: var(--box-shadow);
 }
 
+.right-column {
+    background-color: var(--right-clr);
+    color: var(--card-clr);
+}
+
+/* Undertittel */
+.header-two {
+    color: var(--card-clr);
+    margin-top: 20px;
+    font-size: 15px;
+    background-color: var(--right-clr);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    text-align: center;
+}
+
+.header-two > h2 {
+    padding-left: 1rem;
+    text-align: center;
+}
+
 @media screen and (max-width: 800px) {
     .leftcolumn, .rightcolumn {
         width: 100%;
         padding: 0;
     }
-}
 
-.right-column {
-    background-color: var(--right-clr);
-    color: var(--card-clr);
+    .header-two > h2.right-h2 {
+        display: none;
+    }
 }

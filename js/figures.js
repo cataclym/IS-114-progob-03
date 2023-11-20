@@ -87,29 +87,29 @@ function star(size, color, canvasID, positionX = 0, positionY = 0) {
 
     const cx = positionX,
     cy = positionY,
-    spikes = 5,
+    edges = 5,
     outerRadius = 30 * size,
     innerRadius = 11 * size;
 
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
 
-        let rot= Math.PI/2*3;
+        let rot= Math.PI / 2 * 3;
         let x = cx;
         let y = cy;
-        let step = Math.PI / spikes;
+        let step = Math.PI / edges;
 
         ctx.beginPath();
         ctx.moveTo(cx, cy - outerRadius)
 
-        for(let i= 0; i < spikes; i++){
+        for(let i= 0; i < edges; i++){
             x = cx + Math.cos(rot) * outerRadius;
             y = cy + Math.sin(rot) * outerRadius;
             ctx.lineTo(x, y)
             rot += step
 
-            x= cx + Math.cos(rot) * innerRadius;
-            y= cy + Math.sin(rot) * innerRadius;
+            x = cx + Math.cos(rot) * innerRadius;
+            y = cy + Math.sin(rot) * innerRadius;
             ctx.lineTo(x, y)
             rot += step
         }

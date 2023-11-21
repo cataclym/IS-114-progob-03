@@ -21,8 +21,8 @@ export function drawStarSVG(svgID) {
 
     const sirkel1 = circleSVG(150, "#000080", 150, 150),
     sirkel2 = circleSVG(100, "#00008B", 150, 150),
-    sirkel3 = starSVG(4.5, "#ffd700", 150, 150),
-    sirkel4 = starSVG(2, "#Ffff00", 150, 150)
+    sirkel3 = starSVG(1.25, "#ffd700", 25, 20),
+    sirkel4 = starSVG(0.5, "#Ffff00", 100, 100)
 
     svgElement.style.width = 300;
     svgElement.style.height = 300;

@@ -24,6 +24,8 @@ export function drawStarSVG(svgID) {
     sirkel3 = starSVG(4.5, "#ffd700", 150, 150),
     sirkel4 = starSVG(2, "#Ffff00", 150, 150)
 
+    svgElement.style.width = 300;
+    svgElement.style.height = 300;
     svgElement.innerHTML += `${sirkel1} ${sirkel2} ${sirkel3} ${sirkel4}`;
 
     

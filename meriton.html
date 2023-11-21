@@ -4,53 +4,67 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./css/gruppe5b.css">
     <title>Title</title>
+    <script type="module" src="./js/meriton.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #flag-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: red;
+        }
+
+        #albanian-eagle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
 </head>
 <body>
-<div class="header">Header</div>
+
+<div class="header">
+    <h2>Meriton Tahiraj</h2>
+</div>
+
 <div class="row">
     <div class="leftcolumn">
+      <div class="card">
+        <h1>Litt om meg</h1>
+        <p>
+            <p2>
+                Heter Meriton Tahiraj. Er 20 år. Kommer fra Albania. Veldig glad i kampsport, teknologi, og biler.
+            </p2>
+        </p>
+    </div>
         <div class="card">
-            Card
+            <canvas class="felles-canvas-svg" id="meriton"></canvas>
+            <svg class="felles-canvas-svg" id="meriton2"></svg>
         </div>
     </div>
     <div class="rightcolumn">
         <div class="card">
-            Card
+            <div style="margin: auto;" class="felles-canvas-svg" id="flag-container"></div>
         </div>
+        <div class="card">
+          <h2>Pyret kode</h2>
+          <h4><a class="felles-link" href="https://github.com/meritontahiraj/pyretfig/tree/main">pyret-figur</a></h4>
+      </div>
     </div>
+  </div>
+<div class="footer">
+    Progoblig03 IS-114
 </div>
-<div class="footer">Footer</div>
-</body>
-</html>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-    }
 
-    #flag-container {
-      position: relative;
-      width: 300px; 
-      height: 200px; 
-      background-color: red;
-    }
-
-    #albanian-eagle {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 100%;
-      max-height: 100%;
-    }
-  </style>
-</head>
-<body>
-  <div id="flag-container"></div>
-
-  <script>
+<script>
     // Create the container and set its attributes
     const flagContainer = document.getElementById('flag-container');
     flagContainer.style.width = '300px'; // Set the desired width
@@ -71,7 +85,6 @@
 
     // Append the eagle image to the container
     flagContainer.appendChild(albanianEagle);
-  </script>
+</script>
 </body>
 </html>
-

@@ -9,7 +9,6 @@ export function drawStar(canvasID) {
 
     star(40, "#Ffff00", canvasID, 100, 100)
     star(90, "#ffd700", canvasID, 100, 100)
-    star(100, "#ffd700", canvasID, 100, 100)
     circle(150, "#00008B", canvasID, 100, 100)
     circle(200, "#000080", canvasID, 100, 100)
 

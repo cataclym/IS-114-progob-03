@@ -28,7 +28,7 @@ rectangle(35, 35, "#F5F5F5", canvasID, 150, 200)
     circle(15, "#DAA520", canvasID, 150, 75)
     circle(16, "#000000", canvasID, 150, 120)
     circle(15, "#DAA520", canvasID, 150, 120)
- 
 }
- 
-drawNisse("marthe")
+ drawNisse("marthe")
+
+

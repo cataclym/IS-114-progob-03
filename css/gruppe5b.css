@@ -1,15 +1,15 @@
 :root {
-    --background-clr: white;
-    --card-clr: #d9d7dd;
+   --background-clr: white;
+    --card-clr: #EEEEEE;
     --font-clr: black;
     --img-bg-clr: var(--background-clr);
-    --right-clr: #393E46;
+    --right-clr: #b4c9ea;
     --box-shadow: rgba(0,0,0,0.8) 3px 3px 1px;
     --box-shadow-button: rgba(0,0,0,0.8) 2px 2px 1px;
     --box-shadow-after: rgba(0,0,0,0.8) 3px 3px 1px;
-    --header-clr: #222831;
-    --footer-clr: #222831;
-    --button-clr: #00adb5;
+    --header-clr: #4a6ca1;
+    --footer-clr: #b4c9ea;
+    --button-clr: #07a8b0;
 }
 
 .felles-canvas-svg {

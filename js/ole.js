@@ -26,9 +26,9 @@ export function drawMikkey(canvasID) {
 export function drawMikkeySVG(scale = 1, svgID) {
     const svgElement = document.getElementById(svgID);
 
-    const sirkel1 = circleSVG(35 * scale, "#000000", 35 * scale, 50  * scale),
-        sirkel2 = circleSVG(35 * scale,  "#000000", 165 * scale, 50  * scale),
-        sirkel3 = circleSVG(52 * scale,  "#000000", 100 * scale, 105  * scale)
+    const sirkel1 = circleSVG(35 * scale, "#000000", 35 * scale, 50 * scale),
+        sirkel2 = circleSVG(35 * scale, "#000000", 165 * scale, 50 * scale),
+        sirkel3 = circleSVG(52 * scale, "#000000", 100 * scale, 105 * scale)
 
     svgElement.innerHTML += `${sirkel1} ${sirkel2} ${sirkel3}`;
 }
@@ -38,10 +38,10 @@ export function drawMarathonSVG(scale = 1, id) {
     const svgElement = document.getElementById(id);
 
     const mainCircle = circleSVG(50 * scale, "rgb(214, 0, 28)", 50 * scale, 50 * scale);
-    const outlineCircle = circleOutlineSVG(30 * scale, "snow", 5 * scale, 50  * scale, 40  * scale);
-    const goldenOutlineCircle = circleOutlineSVG(33 * scale, "gold", 2 * scale, 50  * scale, 40  * scale);
-    const rectangle = rectangleSVG(10 * scale, 30 * scale, "snow", 45 * scale, 69.5  * scale);
-    const goldenRectangle = rectangleSVG(12 * scale, 30 * scale, "gold", 44 * scale, 69.5  * scale);
+    const outlineCircle = circleOutlineSVG(30 * scale, "snow", 5 * scale, 50 * scale, 40 * scale);
+    const goldenOutlineCircle = circleOutlineSVG(33 * scale, "gold", 2 * scale, 50 * scale, 40 * scale);
+    const rectangle = rectangleSVG(10 * scale, 30 * scale, "snow", 45 * scale, 69.5 * scale);
+    const goldenRectangle = rectangleSVG(12 * scale, 30 * scale, "gold", 44 * scale, 69.5 * scale);
     const whiteStar = starSVG(0.20 * scale, "snow", 30 * scale, 17.5 * scale);
     const whiteTriangle = `<g transform="scale(1, 3) translate(${-6.6 * scale})">${triangleSVG(0.13 * scale, "snow", 50 * scale, 11 * scale)}</g>`;
 
@@ -55,12 +55,12 @@ export function drawMarathonSVG(scale = 1, id) {
 export function drawMarathonCanvas(scale = 1, id = "ole") {
     circle(50 * scale, "rgb(214, 0, 28)", id, 50 * scale, 50 * scale);
 
-    circleOutline(31 * scale, "gold",5 * scale, id, 50  * scale, 40  * scale);
+    circleOutline(31 * scale, "gold", 5 * scale, id, 50 * scale, 40 * scale);
 
-    rectangle(12 * scale, 30 * scale, "gold", id, 44 * scale, 69.5  * scale);
-    rectangle(10 * scale, 30 * scale, "white", id, 45 * scale, 69.5  * scale);
+    rectangle(12 * scale, 30 * scale, "gold", id, 44 * scale, 69.5 * scale);
+    rectangle(10 * scale, 30 * scale, "white", id, 45 * scale, 69.5 * scale);
 
-    circleOutline(30 * scale, "snow",5 * scale, id, 50  * scale, 40  * scale);
+    circleOutline(30 * scale, "snow", 5 * scale, id, 50 * scale, 40 * scale);
 
     star(0.7 * scale, "snow", id, 50 * scale, 40 * scale);
 
@@ -108,10 +108,9 @@ if (document.URL.endsWith("ole.html")) {
     drawMarathonSVG(1.5, "ole");
     drawMarathonSVG(1.5, "svgFigur")
     drawMarathonCanvas(1.5, "canvasFigur")
-    drawBall(1.5,"ball")
+    drawBall(1.5, "ball")
     drawMikkeySVG(0.9, "mickey")
-}
-else {
+} else {
     drawMarathonSVG(1.9, "ole")
 }
 

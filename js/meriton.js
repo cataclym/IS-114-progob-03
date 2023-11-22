@@ -1,13 +1,13 @@
 import {circle, circleOutline, circleOutlineSVG, circleSVG, rectangle, rectangleSVG} from "./figures.js"
 
 function gingerbreadman() {
-const id = "meriton";
+    const id = "meriton";
 
-const element = document.getElementById(id)
-const ctx = element.getContext("2d")
+    const element = document.getElementById(id)
+    const ctx = element.getContext("2d")
 
-ctx.canvas.width = 300
-ctx.canvas.height = 500
+    ctx.canvas.width = 300
+    ctx.canvas.height = 500
 
 
     circle(
@@ -61,7 +61,7 @@ ctx.canvas.height = 500
         15, "red", id, 145, 180
     )
     circleOutline(
-       20, "snow", 5, id, 145, 110
+        20, "snow", 5, id, 145, 110
     )
     rectangle(
         70, 25, "chocolate", id, 110, 85
@@ -69,9 +69,6 @@ ctx.canvas.height = 500
 }
 
 gingerbreadman()
-
-
-
 
 
 circleSVG(
@@ -92,7 +89,6 @@ circleSVG(
 circleSVG(
     15, "red", 135, 170
 )
-
 
 
 rectangleSVG(
@@ -126,68 +122,68 @@ circleSVG(
     15, "red", 145, 180
 )
 circleOutlineSVG(
-   20, "snow", 5, 145, 110
+    20, "snow", 5, 145, 110
 )
 rectangleSVG(
     70, 25, "chocolate", 110, 85
 )
 
 const sirkel0 = circleSVG(
-    70, "chocolate", 145, 85
-),
- sirkel1 = circleSVG(
-    10, "snow", 165, 65
-),
-sirkel2 = circleSVG(
-    10, "snow", 127, 65
-),
-sirkel3 = circleSVG(
-    15, "red", 135, 270
-),
-sirkel4 = circleSVG(
-    15, "red", 135, 220
-),
-sirkel5 = circleSVG(
-    15, "red", 135, 170
-),
+        70, "chocolate", 145, 85
+    ),
+    sirkel1 = circleSVG(
+        10, "snow", 165, 65
+    ),
+    sirkel2 = circleSVG(
+        10, "snow", 127, 65
+    ),
+    sirkel3 = circleSVG(
+        15, "red", 135, 270
+    ),
+    sirkel4 = circleSVG(
+        15, "red", 135, 220
+    ),
+    sirkel5 = circleSVG(
+        15, "red", 135, 170
+    ),
 
 
-rektangel1 = rectangleSVG(
-    300, 70, "chocolate", 1, 150
-),
-rektangel2 = rectangleSVG(
-    140, 200, "chocolate", 75, 150
-),
-rektangel3 = rectangleSVG(
-    65, 170, "chocolate", 150, 340
-),
-rektangel4 = rectangleSVG(
-    65, 170, "chocolate", 75, 340
-),
-rektangel5 = rectangleSVG(
-    7, 70, "snow", 30, 150
-),
-rektangel6 = rectangleSVG(
-    140, 7, "snow", 76, 307
-),
-rektangel7 = rectangleSVG(
-    7, 70, "snow", 255, 150
-),
-rektangel8 = circleSVG(
-    15, "red", 145, 280
-),
-sirkel6 = circleSVG(
-    15, "red", 145, 230
-),
-sirkel7 = circleSVG(
-    15, "red", 145, 180
-),
-sirkel8 = circleOutlineSVG(
-   20, "snow", 5, 145, 110
-),
-rektangel9 = rectangleSVG(
-    70, 25, "chocolate", 110, 85
-);
+    rektangel1 = rectangleSVG(
+        300, 70, "chocolate", 1, 150
+    ),
+    rektangel2 = rectangleSVG(
+        140, 200, "chocolate", 75, 150
+    ),
+    rektangel3 = rectangleSVG(
+        65, 170, "chocolate", 150, 340
+    ),
+    rektangel4 = rectangleSVG(
+        65, 170, "chocolate", 75, 340
+    ),
+    rektangel5 = rectangleSVG(
+        7, 70, "snow", 30, 150
+    ),
+    rektangel6 = rectangleSVG(
+        140, 7, "snow", 76, 307
+    ),
+    rektangel7 = rectangleSVG(
+        7, 70, "snow", 255, 150
+    ),
+    rektangel8 = circleSVG(
+        15, "red", 145, 280
+    ),
+    sirkel6 = circleSVG(
+        15, "red", 145, 230
+    ),
+    sirkel7 = circleSVG(
+        15, "red", 145, 180
+    ),
+    sirkel8 = circleOutlineSVG(
+        20, "snow", 5, 145, 110
+    ),
+    rektangel9 = rectangleSVG(
+        70, 25, "chocolate", 110, 85
+    );
 
 const svgelement = document.getElementById("meriton2")
 svgelement.style.width = "300px";

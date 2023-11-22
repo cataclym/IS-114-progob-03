@@ -11,7 +11,7 @@ export function drawSantaSVG(scale = 1, id = "mohammad") {
 
     // Santa's eyes
     const leftEye = circleSVG(14 * scale, "black", 50 * scale, 50 * scale);
-    const rightEye = circleSVG(14 * scale, "black", 110 * scale, 40  * scale);
+    const rightEye = circleSVG(14 * scale, "black", 110 * scale, 40 * scale);
 
     // Santa's nose
     const nose = circleSVG(20 * scale, "red", 95 * scale, 85 * scale);
@@ -71,8 +71,7 @@ if (document.URL.endsWith("mohammad.html")) {
 
     drawSantaSVG(1.5, "svgFigur")
     drawSantaCanvas(1.5, "canvasFigur")
-}
-else {
+} else {
     drawSantaSVG(1.5, 'mohammad');
 }
 

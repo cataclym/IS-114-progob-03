@@ -16,8 +16,8 @@ knapp2 = circleSVG(4, "black", 97, 75);
 
 const svgElement = document.getElementById("espen");
 
-svgElement.style.width = 150;
-svgElement.style.height = 285;
+svgElement.style.width = "150px";
+svgElement.style.height = "285px";
 
 svgElement.innerHTML += "<g transform='translate(175, 300) rotate(180)'>" + bigsirkel2 + bigsirkel + hatt2 + hatt1 + knapp2 + knapp1 + gulrot + smallsirkel + smallsirkel2 + "</g>";
 
@@ -31,7 +31,7 @@ ctx.canvas.height = 300
 circle(10, "snow", espen1, 100, 100)
 
 //NedersteSirkel
-circle(75, "snow", espen1, 100, 100) 
+circle(75, "snow", espen1, 100, 100)
 //NestNedersteSirkel
 circle(50, "snow", espen1, 100, 200)
 //øyne1

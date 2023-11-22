@@ -189,9 +189,7 @@ rektangel9 = rectangleSVG(
     70, 25, "chocolate", 110, 85
 );
 
-
-
 const svgelement = document.getElementById("meriton2")
-svgelement.style.width = 300;
-svgelement.style.height = 500;
-svgelement.innerHTML = `${sirkel0}${sirkel1} ${sirkel2}${sirkel3}${sirkel4}${sirkel5}${sirkel8}${rektangel1}${rektangel2}${rektangel3}${rektangel4}${rektangel5}${rektangel6}${rektangel7}${rektangel8}${rektangel9} ${sirkel6}${sirkel7}`
+svgelement.style.width = "300px";
+svgelement.style.height = "500px";
+svgelement.innerHTML = `${sirkel0} ${sirkel1} ${sirkel2}${sirkel3}${sirkel4}${sirkel5}${sirkel8}${rektangel1}${rektangel2}${rektangel3}${rektangel4}${rektangel5}${rektangel6}${rektangel7}${rektangel8}${rektangel9} ${sirkel6}${sirkel7}`

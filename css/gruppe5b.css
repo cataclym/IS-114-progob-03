@@ -96,7 +96,7 @@ body {
 .footer {
     padding: 20px;
     text-align: center;
-    color: var(--card-clr);
+    color: var(--font-clr);
     background: var(--footer-clr);
     margin-top: 20px;
     border-radius: 10px;
@@ -105,12 +105,12 @@ body {
 
 .right-column {
     background-color: var(--right-clr);
-    color: var(--card-clr);
+    color: var(--font-clr);
 }
 
 /* Undertittel */
 .header-two {
-    color: var(--card-clr);
+    color: var(--font-clr);
     margin-top: 20px;
     font-size: 15px;
     background-color: var(--right-clr);

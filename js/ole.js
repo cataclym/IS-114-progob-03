@@ -43,7 +43,7 @@ export function drawMarathonSVG(scale = 1, id) {
     const rectangle = rectangleSVG(10 * scale, 30 * scale, "snow", 45 * scale, 69.5  * scale);
     const goldenRectangle = rectangleSVG(12 * scale, 30 * scale, "gold", 44 * scale, 69.5  * scale);
     const whiteStar = starSVG(0.20 * scale, "snow", 30 * scale, 17.5 * scale);
-    const whiteTriangle = `<g transform="scale(1, 4)">${triangleSVG(0.13 * scale, "snow", 50 * scale, 11 * scale)}</g>`;
+    const whiteTriangle = `<g transform="scale(1, 3) translate(${-6.6 * scale})">${triangleSVG(0.13 * scale, "snow", 50 * scale, 11 * scale)}</g>`;
 
     const innherHTML = `${mainCircle} ${goldenOutlineCircle} ${whiteTriangle} ${goldenRectangle} ${outlineCircle} ${rectangle} ${whiteStar}`;
 
@@ -94,7 +94,7 @@ export function drawFlag(canvasID) {
     rectangle(20, 160, "rgba(0, 32, 91, 1)", canvasID, 70, 0)
 }
 
-export function drawMovingBall(scale = 1, id) {
+export function drawBall(scale = 1, id) {
     const element = document.getElementById(id);
 
     element.innerHTML = `${circleSVG(50 * scale, "rgba(186, 12, 47, 1)", 50 * scale, 50 * scale)}
@@ -108,7 +108,7 @@ if (document.URL.endsWith("ole.html")) {
     drawMarathonSVG(1.5, "ole");
     drawMarathonSVG(1.5, "svgFigur")
     drawMarathonCanvas(1.5, "canvasFigur")
-    drawMovingBall(1.5,"ball")
+    drawBall(1.5,"ball")
     drawMikkeySVG(0.9, "mickey")
 }
 else {

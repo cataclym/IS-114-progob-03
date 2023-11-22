@@ -134,9 +134,9 @@ function triangle(size, color, id, positionX = 0, positionY = 0) {
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
         ctx.beginPath();
-        ctx.moveTo((50 + positionX) * size, positionY * size);
-        ctx.lineTo(positionX * size, (50 + positionY) * size);
-        ctx.lineTo((100 + positionX) * size, (50 + positionY) * size);
+        ctx.moveTo((25 + positionX) * size, positionY * size);
+        ctx.lineTo((positionX) * size, (50 + positionY) * size);
+        ctx.lineTo((50 + positionX) * size, (50 + positionY) * size);
         ctx.closePath();
         ctx.fillStyle = color;
         ctx.fill();
@@ -147,7 +147,7 @@ function triangle(size, color, id, positionX = 0, positionY = 0) {
 }
 
 function triangleSVG(size, color, positionX = 0, positionY = 0) {
-    return `<polygon transform="translate(${positionX}, ${positionY})" fill="${color}" points="0,0 ${-50 * size},${50 * size} ${50 * size},${50 * size}" />`;
+    return `<polygon transform="translate(${positionX}, ${positionY})" fill="${color}" points="${50 * size} ${15 * size}, ${100 * size} ${100 * size}, 0 ${100 * size}" />`;
 }
 
 export {

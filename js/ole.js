@@ -10,7 +10,6 @@ import {
     starSVG
 } from "./figures.js"
 
-// Hode
 export function drawMikkey(canvasID) {
     const canvas = document.getElementById(canvasID);
 

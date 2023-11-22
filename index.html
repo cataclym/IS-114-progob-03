@@ -8,13 +8,21 @@
     <script type="module" src="./js/mohammad.js"></script>
     <script type="module" src="./js/ole.js"></script>
     <title>Gruppe 5b</title>
+
+    <script>
+        function getSetDate() {
+            const date = new Date(2023, 10, 22).toDateString();
+            for (const element of document.getElementsByClassName("date")) {
+                element.innerHTML += date.toString();
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="getSetDate()">
 <div class="row">
     <div class="header">
         <h2>Progob-03 Gruppe 5b</h2>
         <h4>Kreative figurer</h4>
-        <h5>Gruppeoppgave IS-114 november, 2023</h5>
     </div>
 
     <div class="leftcolumn">
@@ -23,53 +31,53 @@
         </div>
         <div class="card">
             <h2>Anna</h2>
-            <h5>Title description, Sep 2, 2017</h5>
+            <h5>Anna sin figur</h5>
             <a href="anna.html">
                 <canvas class="felles-canvas-svg" id="anna"></canvas>
             </a>
-            <p>Some text..</p>
+            <p class="date"></p>
         </div>
         <div class="card">
             <h2>Espen</h2>
-            <h5>Title description, Sep 2, 2017</h5>
+            <h5>Espen sin figur</h5>
             <a href="espen.html">
                 <svg class="felles-canvas-svg" id="espen"></svg>
             </a>
-            <p>Some text..</p>
+            <p class="date"></p>
         </div>
         <div class="card">
             <h2>Marthe</h2>
-            <h5>Title description, Sep 2, 2017</h5>
+            <h5>Marthe sin figur</h5>
             <a href="marthe.html">
                 <canvas class="felles-canvas-svg" id="marthe"></canvas>
             </a>
-            <p>Some text..</p>
+            <p class="date"></p>
         </div>
         <div class="card">
             <h2>Meriton</h2>
-            <h5>Title description, Sep 2, 2017</h5>
+            <h5>Meriton sin figur</h5>
             <a href="meriton.html">
                 <canvas class="felles-canvas-svg" id="meriton"></canvas>
             </a>
-            <p>Some text..</p>
+            <p class="date"></p>
         </div>
         <div class="card">
             <h2>Mohammad</h2>
-            <h5>Title description, Sep 2, 2017</h5>
+            <h5>Mohammad sin figur</h5>
             <a href="mohammad.html">
                 <svg class="felles-canvas-svg" id="mohammad"></svg>
             </a>
-            <p>Some text..</p>
+            <p class="date"></p>
         </div>
         <div class="card">
             <h2>Ole</h2>
-            <h5>Title description, Sep 2, 2017</h5>
+            <h5>Ole sin figur</h5>
             <a href="ole.html">
                 <svg width="306" height="200" class="felles-canvas-svg" id="ole">
                     <g transform="translate(50, 1)"></g>
                 </svg>
             </a>
-            <p>Some text..</p>
+            <p class="date"></p>
         </div>
     </div>
     <div class="rightcolumn">

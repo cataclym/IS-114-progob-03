@@ -1,15 +1,15 @@
 :root {
     --background-clr: white;
-    --card-clr: #d9d7dd;
+    --card-clr: #EEEEEE;
     --font-clr: black;
     --img-bg-clr: var(--background-clr);
-    --right-clr: #393E46;
-    --box-shadow: rgba(0,0,0,0.8) 3px 3px 1px;
-    --box-shadow-button: rgba(0,0,0,0.8) 2px 2px 1px;
-    --box-shadow-after: rgba(0,0,0,0.8) 3px 3px 1px;
-    --header-clr: #222831;
-    --footer-clr: #222831;
-    --button-clr: #00adb5;
+    --right-clr: #b4c9ea;
+    --box-shadow: rgba(0, 0, 0, 0.8) 3px 3px 1px;
+    --box-shadow-button: rgba(0, 0, 0, 0.8) 2px 2px 1px;
+    --box-shadow-after: rgba(0, 0, 0, 0.8) 3px 3px 1px;
+    --header-clr: #4a6ca1;
+    --footer-clr: #b4c9ea;
+    --button-clr: #07a8b0;
 }
 
 .felles-canvas-svg {
@@ -44,13 +44,13 @@ body {
     padding: 20px;
     background-color: var(--background-clr);
     margin: 0;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 /* Tittel */
 .header {
     color: var(--card-clr);
-    padding: 30px;
+    padding: 10px;
     font-size: 40px;
     text-align: center;
     background: var(--header-clr);
@@ -96,7 +96,7 @@ body {
 .footer {
     padding: 20px;
     text-align: center;
-    color: var(--card-clr);
+    color: var(--font-clr);
     background: var(--footer-clr);
     margin-top: 20px;
     border-radius: 10px;
@@ -105,12 +105,12 @@ body {
 
 .right-column {
     background-color: var(--right-clr);
-    color: var(--card-clr);
+    color: var(--font-clr);
 }
 
 /* Undertittel */
 .header-two {
-    color: var(--card-clr);
+    color: var(--font-clr);
     margin-top: 20px;
     font-size: 15px;
     background-color: var(--right-clr);

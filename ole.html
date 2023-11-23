@@ -9,18 +9,27 @@
             width: 100px;
             height: 100px;
             position: relative;
-            animation: move-circle 5s infinite;
+            animation: move-circle 2s infinite ease-in-out;
             animation-direction: alternate;
+            margin-top: 1rem;
         }
 
         @keyframes move-circle {
-            from { top: 5%; }
-            to { top: 100%;}
+            from {
+                left: 5%;
+            }
+            to {
+                left: 82%;
+            }
         }
 
         @keyframes move-circle-small {
-            from { left: 0; }
-            to { left: 85%; }
+            from {
+                left: 0;
+            }
+            to {
+                left: 85%;
+            }
         }
 
         @media screen and (max-width: 800px) {
@@ -31,74 +40,79 @@
     </style>
 </head>
 <body class="ole">
-    <div class="header">
-        <h2>Ole M. K. Hagberg</h2>
-        <h4>Student</h4>
-        <svg id="ole" width="220">
-            <g transform="translate(35, 0)"></g>
-        </svg>
-        <canvas id="flag"></canvas>
-    </div>
-    <div class="row">
-        <div class="leftcolumn">
-            <div class="card">
-                <h4>Oppgaven</h4>
-                <p>Hei, denne oppgaven har vært gøy og lærerik. Jeg har hatt muligheten til å bruke mine tidligere kunnskaper med JS, HTML og CSS, men også lært mye nytt.</p>
-            </div>
-            <div class="card">
-                <h4>Litt om gruppe-oppgaven</h4>
-                <p>Gruppen ble tidlig enige om en universel utforming, noe som har involvert utvikling av:</p>
-                <ul>
-                    <li>Farge tema</li>
-                    <li>Header</li>
-                    <li><mark>Kort?</mark></li>
-                    <li>Footer</li>
-                    <li>Rader</li>
-                    <li>Kolonner</li>
-                </ul>
-                <p>Samtidig har vi hatt ønsker om forskjellige funksjoner for å utvikle våre figurer:</p>
-                <ul>
-                    <li><b>Circle</b> - SVG og Canvas</li>
-                    <li><b>Circle med Outline</b> - SVG og Canvas</li>
-                    <li><b>Rectangle</b> - SVG og Canvas</li>
-                    <li><b>Rectangle</b> med Outline - SVG og Canvas</li>
-                    <li><b>Star</b> - SVG og Canvas</li>
-                    <li><b>Triangle</b> - SVG og Canvas</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h4>Pyret oppgave grafikk <a class="felles-link" href="https://github.com/cataclym/uia-ind02">Link</a></h4>
-                <p>Hentet fra mitt GitHub-Repository for progob-02.</p>
-                <img class="felles-canvas-svg" src="https://camo.githubusercontent.com/4def24527384c53bd3108eab02e0fea893af79ba6eeef8f3162292a5dd15118a/68747470733a2f2f6e657874636c6f75642e6c696265726e6574732e6f72672f732f656d727877657364464771475279592f646f776e6c6f61642f53637265656e73686f745f32303233313130345f3231313730332e706e67" alt="">
-            </div>
-            <div class="card">
-                <h4>Figur i SVG og canvas format</h4>
-                <h3>SVG format</h3>
-                <svg class="felles-canvas-svg" id="svgFigur"></svg>
-                <h3>Canvas format</h3>
-                <canvas class="felles-canvas-svg" id="canvasFigur"></canvas>
-            </div>
+<div class="header">
+    <h2>Ole M. K. Hagberg</h2>
+    <h4>Student</h4>
+
+</div>
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h4>Oppgaven</h4>
+            <p>Hei, denne oppgaven har vært gøy og lærerik. Jeg har hatt muligheten til å bruke mine tidligere
+                kunnskaper med JS, HTML og CSS, men også lært mye nytt.</p>
+            <svg id="ole" width="220">
+                <g transform="translate(35, 0)"></g>
+            </svg>
+            <canvas id="flag"></canvas>
         </div>
-        <div class="rightcolumn">
-            <div class="card right-column">
-                <h2>Pyret kode</h2>
-                <h4><a class="felles-link" href="https://github.com/cataclym/pyret-figur/tree/main">pyret-figur</a></h4>
-            </div>
-            <div class="card right-column">
-                <h4><a class="felles-link" href="/IS-114-progob-03/">Tilbake</a></h4>
-            </div>
-            <div class="card right-column">
-                <h3>SVG</h3>
-                <svg id="ball"></svg>
-            </div>
-            <div class="card right-column">
-                <h3>SVG</h3>
-                <svg id="mickey"></svg>
-            </div>
-            <a href="/IS-114-progob-03/"><svg class="ole" id="moving"></svg></a>
+        <div class="card">
+            <h4>Litt om gruppe-oppgaven</h4>
+            <p>Gruppen ble tidlig enige om en universel utforming, noe som har involvert utvikling av:</p>
+            <ul>
+                <li>Farge tema</li>
+                <li>Header</li>
+                <li>
+                    <mark>Kort?</mark>
+                </li>
+                <li>Footer</li>
+                <li>Rader</li>
+                <li>Kolonner</li>
+            </ul>
+            <p>Samtidig har vi hatt ønsker om forskjellige funksjoner for å utvikle våre figurer:</p>
+            <ul>
+                <li><b>Circle</b> - SVG og Canvas</li>
+                <li><b>Circle med Outline</b> - SVG og Canvas</li>
+                <li><b>Rectangle</b> - SVG og Canvas</li>
+                <li><b>Rectangle</b> med Outline - SVG og Canvas</li>
+                <li><b>Star</b> - SVG og Canvas</li>
+                <li><b>Triangle</b> - SVG og Canvas</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h4>Figur i SVG og canvas format</h4>
+            <h3>SVG format</h3>
+            <svg class="felles-canvas-svg" id="svgFigur"></svg>
+            <h3>Canvas format</h3>
+            <canvas class="felles-canvas-svg" id="canvasFigur"></canvas>
         </div>
     </div>
-    <div class="footer">
-        <h2>IS-114-progob-03</h2>
+    <div class="rightcolumn">
+        <div class="card right-column">
+            <h2>Lenker</h2>
+            <h4><a class="felles-link" href="https://github.com/cataclym/pyret-figur/tree/main">pyret-figur</a> <a
+                    class="felles-link" href="/IS-114-progob-03/">Tilbake</a></h4>
+        </div>
+        <div class="card right-column">
+            <h4>Pyret oppgave grafikk <a class="felles-link" href="https://github.com/cataclym/uia-ind02">Link</a></h4>
+            <p>Hentet fra mitt GitHub-Repository for progob-02.</p>
+            <img class="felles-canvas-svg"
+                 src="https://github.com/cataclym/uia-ind02/blob/main/Screenshot_20231104_211703.png?raw=true" alt="">
+        </div>
+        <div class="card right-column">
+            <h3>SVG</h3>
+            <svg id="ball"></svg>
+        </div>
+        <div class="card right-column">
+            <h3>SVG</h3>
+            <svg id="mickey"></svg>
+        </div>
+        <a href="/IS-114-progob-03/">
+            <svg class="ole" id="moving"></svg>
+        </a>
     </div>
+</div>
+<div class="footer">
+    <h2>IS-114-progob-03</h2>
+</div>
 </body>

@@ -1,6 +1,7 @@
 # IS-114-progob-03
 
 Funksjoner 101:
+
 ```js
 // Argumenter:
 // Radius                                       Number
@@ -24,6 +25,7 @@ starSVG(size, color, positionX, positionY)
 ```
 
 ## Eks. funksjon som tegner disney symbol.
+
 ```js
 export function drawMikkey(canvasID) {
     // Denne delen er valgritt -->
@@ -32,12 +34,12 @@ export function drawMikkey(canvasID) {
 
     // Henter kontekst i 2D.
     const ctx = canvas.getContext("2d");
-    
+
     // Om man trenger å sette canvas sin bredde/høyde
     ctx.canvas.width = 200
     ctx.canvas.height = 200
     // <--
-    
+
     // Tegner tre sirkler innenfor canvas med canvasID.
     //    Radius        Svart farge         Posisjon   
     circle(35, "#000000", canvasID, 35, 50)
@@ -47,6 +49,7 @@ export function drawMikkey(canvasID) {
 ```
 
 ## Eks. samme tegning med SVG
+
 ```js
 export function drawMikkeySVG(svgID) {
     // Henter en <svg> tag med id svgID

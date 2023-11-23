@@ -1,24 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad</title>
     <link rel="stylesheet" type="text/css" href="./css/gruppe5b.css">
-    <title>Title</title>
+    <script type="module" src="./js/mohammad.js"></script>
+    <style>
+        /* Animasjonsstyling for sirklen */
+        .mohammad#moving {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: move-circle 5s infinite;
+            animation-direction: alternate;
+        }
+
+        @media screen and (max-width: 800px) {
+            .mohammad#moving {
+                animation: move-circle-small 2s infinite alternate ease-in-out;
+            }
+        }
+    </style>
 </head>
-<body>
-<div class="header">Header</div>
+
+<body class="mohammad">
+<div class="header">
+    <h2>Mohammad Shoqair</h2>
+    <h4>Student</h4>
+    <svg id="mohammad"></svg>
+    <canvas id="flag"></canvas>
+</div>
 <div class="row">
     <div class="leftcolumn">
         <div class="card">
-            Card
+            <h4>Oppgaven</h4>
+            <p>Hei, denne oppgaven har vært gøy og lærerik. Jeg har lært meg flere ting om både HTML, css og JS.</p>
+        </div>
+        <div class="card">
+            <h4>Litt mer om meg</h4>
+            <p></p>
+        </div>
+        <div class="card">
+            <h4>Pyret oppgave grafikk <a class="felles-link"
+                                         href="https://github.com/MohammadShoqair/Flagg.git">Link</a></h4>
+            <p>Hentet fra min GitHub. Repository for Flagg</p>
+            <img class="felles-canvas-svg"
+                 src="https://raw.githubusercontent.com/MohammadShoqair/Flagg/main/Screenshot%20(560).png">
+        </div>
+        <div class="card">
+            <h4>Figur i SVG og canvas format</h4>
+            <h3>SVG format</h3>
+            <svg class="felles-canvas-svg" id="svgFigur">
+            </svg>
+            <h3>Canvas format</h3>
+            <canvas class="felles-canvas-svg" id="canvasFigur"></canvas>
         </div>
     </div>
     <div class="rightcolumn">
-        <div class="card">
-            Card
+        <div class="card right-column">
+            <h2>Pyret kode</h2>
+            <h4><a class="felles-link"
+                   href="https://github.com/MohammadShoqair/Flagg/blob/main/figur.arr">pyret-figur</a></h4>
         </div>
+        <div class="card right-column">
+            <h4><a class="felles-link" href="/IS-114-progob-03/">Tilbake</a></h4>
+        </div>
+        <svg class="mohammad" id="moving"></svg>
     </div>
 </div>
-<div class="footer">Footer</div>
+<div class="footer">
+    <h2>IS-114-progob-03</h2>
+</div>
 </body>
+
 </html>

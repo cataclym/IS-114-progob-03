@@ -3,22 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./css/gruppe5b.css">
-    <title>Title</title>
+    <title>Meriton Tahiraj</title>
+    <script type="module" src="./js/meriton.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #flag-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: red;
+        }
+
+        #albanian-eagle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
 </head>
 <body>
-<div class="header">Header</div>
+
+<div class="header">
+    <h2>Meriton Tahiraj</h2>
+</div>
+
 <div class="row">
     <div class="leftcolumn">
         <div class="card">
-            Card
+            <h1>Litt om meg</h1>
+            <p>
+                <p2>
+                    Heter Meriton Tahiraj. Er 20 år. Kommer fra Albania. Veldig glad i kampsport, teknologi, og biler.
+                </p2>
+            </p>
+        </div>
+        <div class="card">
+            <canvas class="felles-canvas-svg" id="meriton"></canvas>
+            <svg class="felles-canvas-svg" id="meriton2"></svg>
+        </div>
+        <div class="card">
+            <img class="felles-canvas-svg" src="Images/Skjermbilde_2023-11-21_kl._18.50.45.png">
         </div>
     </div>
     <div class="rightcolumn">
         <div class="card">
-            Card
+            <div style="margin: auto;" class="felles-canvas-svg" id="flag-container"></div>
+        </div>
+        <div class="card">
+            <h2>Pyret kode</h2>
+            <h4><a class="felles-link" href="https://github.com/meritontahiraj/pyretfig/tree/main">pyret-figur</a></h4>
+        </div>
+        <div class="card">
+            <h4><a class="felles-link" href="/IS-114-progob-03/">Tilbake</a></h4>
         </div>
     </div>
 </div>
-<div class="footer">Footer</div>
+<div class="footer">
+    Progoblig03 IS-114
+</div>
+
+<script>
+    // Create the container and set its attributes
+    const flagContainer = document.getElementById('flag-container');
+    flagContainer.style.width = '300px'; // Set the desired width
+    flagContainer.style.height = '200px'; // Set the desired height
+    flagContainer.style.backgroundColor = 'red';
+
+    // Create the Albanian eagle image and set its attributes
+    const albanianEagle = document.createElement('img');
+    albanianEagle.src = 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Albanian_Eagle.svg';
+    albanianEagle.alt = 'Albanian Eagle';
+    albanianEagle.id = 'albanian-eagle';
+    albanianEagle.style.position = 'absolute';
+    albanianEagle.style.top = '50%';
+    albanianEagle.style.left = '50%';
+    albanianEagle.style.transform = 'translate(-50%, -50%)';
+    albanianEagle.style.maxWidth = '100%';
+    albanianEagle.style.maxHeight = '100%';
+
+    // Append the eagle image to the container
+    flagContainer.appendChild(albanianEagle);
+</script>
 </body>
 </html>

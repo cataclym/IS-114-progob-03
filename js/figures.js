@@ -8,8 +8,7 @@ function circle(radius, color, canvasId = "canvas", positionX = 0, positionY = 0
         ctx.arc(positionX, positionY, radius, 0, Math.PI * 2, false);
         ctx.fill();
         return ctx.closePath()
-    }
-    else {
+    } else {
         throw new Error("Canvas doesn't match given ID")
     }
 }
@@ -27,8 +26,7 @@ function rectangle(width, height, color, canvasId = "canvas", positionX = 0, pos
         ctx.strokeStyle = color;
         ctx.fillRect(positionX, positionY, width, height);
         return ctx.closePath();
-    }
-    else {
+    } else {
         throw new Error("Canvas doesn't match given ID")
     }
 }
@@ -49,8 +47,7 @@ function circleOutline(radius, color, outlineWidth, canvasId, positionX, positio
         ctx.arc(positionX, positionY, radius, 0, Math.PI * 2, false);
         ctx.stroke();
         return ctx.closePath();
-    }
-    else {
+    } else {
         throw new Error("Canvas doesn't match given ID")
     }
 }
@@ -72,8 +69,7 @@ function rectangleOutline(width, height, color, outlineWidth, canvasId, position
         ctx.stroke();
 
         return ctx.closePath();
-    }
-    else {
+    } else {
         throw new Error("Canvas doesn't match given ID")
     }
 }
@@ -86,15 +82,15 @@ function star(size, color, canvasID, positionX = 0, positionY = 0) {
     const canvas = document.getElementById(canvasID);
 
     const cx = positionX,
-    cy = positionY,
-    edges = 5,
-    outerRadius = 30 * size,
-    innerRadius = 11 * size;
+        cy = positionY,
+        edges = 5,
+        outerRadius = 30 * size,
+        innerRadius = 11 * size;
 
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
 
-        let rot= Math.PI / 2 * 3;
+        let rot = Math.PI / 2 * 3;
         let x = cx;
         let y = cy;
         let step = Math.PI / edges;
@@ -102,7 +98,7 @@ function star(size, color, canvasID, positionX = 0, positionY = 0) {
         ctx.beginPath();
         ctx.moveTo(cx, cy - outerRadius)
 
-        for(let i= 0; i < edges; i++){
+        for (let i = 0; i < edges; i++) {
             x = cx + Math.cos(rot) * outerRadius;
             y = cy + Math.sin(rot) * outerRadius;
             ctx.lineTo(x, y)
@@ -118,14 +114,13 @@ function star(size, color, canvasID, positionX = 0, positionY = 0) {
         ctx.closePath();
         ctx.fillStyle = color;
         ctx.fill();
-    }
-    else {
+    } else {
         throw new Error("Canvas doesn't match given ID")
     }
 }
 
 function starSVG(size = 1, color, positionX = 0, positionY = 0) {
-    return `<polygon transform="translate(${positionX}, ${positionY})" points="${100 * size}, ${10 * size} ${40 * size},${198* size} ${190 * size},${78 * size} ${10 * size},${78 * size} ${160 * size},${198 * size}" fill="${color}" />`
+    return `<polygon transform="translate(${positionX}, ${positionY})" points="${100 * size}, ${10 * size} ${40 * size},${198 * size} ${190 * size},${78 * size} ${10 * size},${78 * size} ${160 * size},${198 * size}" fill="${color}" />`
 }
 
 function triangle(size, color, id, positionX = 0, positionY = 0) {
@@ -134,20 +129,19 @@ function triangle(size, color, id, positionX = 0, positionY = 0) {
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
         ctx.beginPath();
-        ctx.moveTo((50 + positionX) * size, positionY * size);
-        ctx.lineTo(positionX * size, (50 + positionY) * size);
-        ctx.lineTo((100 + positionX) * size, (50 + positionY) * size);
+        ctx.moveTo((25 + positionX) * size, positionY * size);
+        ctx.lineTo((positionX) * size, (50 + positionY) * size);
+        ctx.lineTo((50 + positionX) * size, (50 + positionY) * size);
         ctx.closePath();
         ctx.fillStyle = color;
         ctx.fill();
-    }
-    else {
+    } else {
         throw new Error("Canvas doesn't match given ID")
     }
 }
 
 function triangleSVG(size, color, positionX = 0, positionY = 0) {
-    return `<polygon transform="translate(${positionX}, ${positionY})" fill="${color}" points="0,0 ${-50 * size},${50 * size} ${50 * size},${50 * size}" />`;
+    return `<polygon transform="translate(${positionX}, ${positionY})" fill="${color}" points="${50 * size} ${15 * size}, ${100 * size} ${100 * size}, 0 ${100 * size}" />`;
 }
 
 export {

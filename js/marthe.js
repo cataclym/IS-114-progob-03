@@ -58,8 +58,8 @@ export function drawNisseSVG(svgID) {
         sirkel5 = circleSVG(16, "#000000", 150, 120),
         sirkel6 = circleSVG(15, "#DAA520", 150, 120);
 
-    svgElement.style.width = 300;
-    svgElement.style.height = 300;
+    svgElement.style.width = "300px";
+    svgElement.style.height = "300px";
     // Her legger man sirklene innenfor <svg id="svgID"> <svg/> elementene
     svgElement.innerHTML += `${rektangel1} ${rektangel2} ${rektangel3}${rektangel4} ${rektangel5} ${rektangel6} ${rektangel7} ${sirkel1} ${sirkel2} ${sirkel3} ${sirkel4} ${sirkel5} ${sirkel6}`;
 
